@@ -1,0 +1,103 @@
+Cliente
+
+
+ POST http://localhost:8090/clientes/alta
+
+{
+  "nombre": "Juan 2",
+  "apellido": "Perez",
+  "dni": "1234567890"
+}
+
+
+PUT - http://localhost:8090/clientes/modificar/id
+GET ALL - http://localhost:8090/clientes 
+GET ID - http://localhost:8090/clientes/id
+DELETE - http://localhost:8090/clientes/baja/id
+DELETE ALL -http://localhost:8090/clientes/borrarTodos
+
+
+
+
+
+
+
+
+PRODUCTO:
+
+
+ POST http://localhost:8090/productos/alta
+
+ {
+      "nombre": "Producto B",
+      "precio": 10.5,
+      "stock": 50
+    }
+
+    {
+      "nombre": "Producto A",
+      "precio": 10.5,
+      "stock": 50
+    }
+
+{
+      "nombre": "Producto C",
+      "precio": 10.9,
+      "stock": 53
+    }
+
+PUT - http://localhost:8090/productos/modificar/id
+GET ALL - http://localhost:8090/productos
+GET ID - http://localhost:8090/productos/id
+DELETE - http://localhost:8090/productos/baja/id
+DELETE ALL - http://localhost:8090/productos/borrarTodos
+
+
+
+COMPROBANTE: 
+
+
+POST http://localhost:8090/comprobante/alta
+PUT - http://localhost:8090/comprobante/put/id
+GET ALL - http://localhost:8090/comprobante
+GET ID - http://localhost:8090/comprobante/id
+DELETE -http://localhost:8090/comprobante/baja/id
+
+
+{
+    "cliente": {
+        "id": 1
+    },
+    "linea": [
+        {
+            "descripcion": "Descripcion",
+            "cantidad": 49,
+            "producto": {
+                "id": 1
+            }
+        },
+        {
+            "descripcion": "Nueva descripción",
+            "cantidad": 1,
+            "producto": {
+                "id": 2
+            }
+        }
+    ]
+}
+
+
+
+Agregar Linea a Factura: PUT http://localhost:8090/comprobante/put/{id}
+
+        {
+            "descripcion": "Descripcion",
+            "cantidad": 1,
+            "producto": {
+                "id": 3
+            } 
+
+        }
+        
+   
+ 
